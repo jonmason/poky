@@ -1,0 +1,23 @@
+From 97aa8f9124b4673d15a7823ef9300ec05def760f Mon Sep 17 00:00:00 2001
+From: Alexander Kanavin <alex.kanavin@gmail.com>
+Date: Thu, 20 Dec 2018 18:06:29 +0100
+Subject: [PATCH] Add a missing X11 include
+
+Upstream-Status: Submitted [http://lists.nongnu.org/archive/html/qemu-devel/2019-01/msg03350.html]
+Signed-off-by: Alexander Kanavin <alex.kanavin@gmail.com>
+---
+ include/ui/egl-helpers.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/include/ui/egl-helpers.h b/include/ui/egl-helpers.h
+index 9db7293b..2c32d77e 100644
+--- a/include/ui/egl-helpers.h
++++ b/include/ui/egl-helpers.h
+@@ -4,6 +4,7 @@
+ #include <epoxy/gl.h>
+ #include <epoxy/egl.h>
+ #include <gbm.h>
++#include <X11/Xlib.h>
+ 
+ extern EGLDisplay *qemu_egl_display;
+ extern EGLConfig qemu_egl_config;
