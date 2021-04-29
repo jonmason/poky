@@ -1,0 +1,141 @@
+image: ghcr.io/siemens/kas/kas:latest-release
+
+stages:
+  - prep
+  - build
+
+# Common job fragment to get a worker ready
+.setup:
+  stage: build
+  interruptible: true
+  variables:
+    KAS_WORK_DIR: $CI_PROJECT_DIR/work
+    SSTATE_DIR: $CI_BUILDS_DIR/persist/sstate
+    DL_DIR: $CI_BUILDS_DIR/persist/downloads
+    BB_LOGCONFIG: $CI_PROJECT_DIR/ci/logging.yml
+  before_script:
+    - echo KAS_WORK_DIR = $KAS_WORK_DIR
+    - echo SSTATE_DIR = $SSTATE_DIR
+    - echo DL_DIR = $DL_DIR
+    - rm -rf $KAS_WORK_DIR
+    - mkdir --verbose --parents $KAS_WORK_DIR $SSTATE_DIR $DL_DIR
+
+# Generalised fragment to do a Kas build
+.build:
+  extends: .setup
+  script:
+    - KASFILES=$(./ci/jobs-to-kas "$CI_JOB_NAME")
+    - kas shell --update --force-checkout $KASFILES -c 'cat conf/*.conf'
+    - kas build $KASFILES
+    - ./ci/check-warnings $KAS_WORK_DIR/build/warnings.log
+
+
+#
+# Build stage, the actual build jobs
+#
+
+# Build (and mostly test) jobs for meta-yocto-bsp
+beaglebone-yocto:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: linux-yocto
+
+edgerouter:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: linux-yocto
+
+genericx86-64:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: linux-yocto
+        TESTING: testimage
+
+genericx86:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: linux-yocto
+        TESTING: testimage
+
+# Build and test jobs for all QEMU machines
+# Note: poky-tiny and poky-altcfg are technically distros, but treat them here like a kernel
+qemuarm64:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: [linux-yocto, poky-altcfg, linux-yocto-rt]
+        TESTING: testimage
+
+qemuarm:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: [linux-yocto, poky-altcfg, linux-yocto-rt]
+        TESTING: testimage
+
+qemuarmv5:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: [linux-yocto, poky-altcfg, linux-yocto-rt]
+        TESTING: testimage
+
+qemumips64:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: linux-yocto
+        TESTING: testimage
+
+qemumips:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: [linux-yocto, linux-yocto-rt]
+        TESTING: testimage
+
+qemuppc64:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: linux-yocto
+        TESTING: testimage
+
+qemuppc:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: [linux-yocto, linux-yocto-rt]
+        TESTING: testimage
+
+qemuriscv32:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: linux-yocto
+        TESTING: testimage
+
+qemuriscv64:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: linux-yocto
+        TESTING: testimage
+
+qemux86-64:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: [linux-yocto, poky-altcfg, linux-yocto-rt]
+        TESTING: testimage
+
+qemux86:
+  extends: .build
+  parallel:
+    matrix:
+      - KERNEL: [linux-yocto, poky-altcfg, linux-yocto-rt]
+        TESTING: testimage
