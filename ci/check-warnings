@@ -1,0 +1,19 @@
+#! /bin/bash
+
+# Expects the path to a log file as $1, and if this file has any content
+# then display the contents and exit with an error code.
+
+set -e -u
+
+LOGFILE=$1
+
+LINES=$(grep --invert-match -i -e "relocations in \.text" -e "attempting MIRRORS if available" -e "Hash Equivalence Server" $LOGFILE | wc -l)
+if test "$LINES" -ne 0; then
+    echo ==============================
+    echo The build had warnings/errors:
+    echo ==============================
+    cat $LOGFILE
+    exit 1
+fi
+
+exit 0
