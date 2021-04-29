@@ -1,0 +1,12 @@
+#! /bin/bash
+
+MACHINE="ci/$(echo $1 | cut -d ':' -f 1).yml"
+
+for i in $(echo $1 | cut -s -d ':' -f 2 | sed 's/[][,]//g'); do
+	if [[ $i == 'none' || $i == 'linux-yocto' ]]; then
+		continue
+	fi
+	OPTIONS+=":ci/$i.yml"
+done
+
+echo $MACHINE$OPTIONS
