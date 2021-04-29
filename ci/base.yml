@@ -1,0 +1,39 @@
+header:
+  version: 11
+
+distro: poky
+
+defaults:
+  repos:
+    refspec: master
+
+repos:
+  poky:
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
+
+env:
+  BB_LOGCONFIG: ""
+
+local_conf_header:
+  base: |
+    BB_SERVER_TIMEOUT = "60"
+    CONF_VERSION = "2"
+    PACKAGE_CLASSES = "package_ipk"
+    PACKAGECONFIG:remove:pn-qemu-system-native = "gtk+ sdl"
+    EXTRA_IMAGE_FEATURES:append = " debug-tweaks"
+    INHERIT += "rm_work"
+  noptest: |
+    DISTRO_FEATURES:remove = "ptest"
+  sstate_mirror: |
+    BB_HASHSERVE_UPSTREAM = "hashserv.yocto.io:8687"
+    BB_HASHSERVE = "auto"
+    BB_SIGNATURE_HANDLER = "OEEquivHash"
+    SSTATE_MIRRORS ?= "file://.* http://sstate.yoctoproject.org/dev/PATH;downloadfilename=PATH"
+
+machine: unset
+
+target:
+  - core-image-base
