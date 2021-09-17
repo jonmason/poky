@@ -7,7 +7,8 @@ set -e -u
 
 LOGFILE=$1
 
-if test -s $LOGFILE; then
+LINES=$(grep --invert-match -i -e "attempting MIRRORS if available" -e "Hash Equivalence Server" $LOGFILE | wc -l)
+if test "$LINES" -ne 0; then
     echo ==============================
     echo The build had warnings/errors:
     echo ==============================
