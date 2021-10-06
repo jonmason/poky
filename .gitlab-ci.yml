@@ -31,6 +31,20 @@ stages:
 
 
 #
+# Prep stage
+#
+update-tree:
+  extends: .setup
+  stage: prep
+  script:
+    - BRANCH=$(grep refspec ci/base.yml | cut -d ':' -f 2 | sed 's/^ //g')
+    - git config user.email "none@ya.biz"
+    - git config user.name "None Ya Biznez"
+    - git fetch -ftp --all
+    - git rebase origin/$BRANCH || git rebase --abort
+
+
+#
 # Build stage, the actual build jobs
 #
 
