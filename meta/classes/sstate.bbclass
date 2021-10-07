@@ -1118,7 +1118,7 @@ def setscene_depvalid(task, taskdependees, notneeded, d, log=None):
             # Allow excluding certain recursive dependencies. If a recipe needs it should add a
             # specific dependency itself, rather than relying on one of its dependees to pull
             # them in.
-            # See also http://lists.openembedded.org/pipermail/openembedded-core/2018-January/146324.html
+            # See also https://www.openembedded.org/pipermail/openembedded-core/2018-January/146324.html
             not_needed = False
             excludedeps = d.getVar('_SSTATE_EXCLUDEDEPS_SYSROOT')
             if excludedeps is None:

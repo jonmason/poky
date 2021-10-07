@@ -128,7 +128,7 @@ FILES:${PN} += "${libdir}/webkit2gtk-4.1/injected-bundle/libwebkit2gtkinjectedbu
 
 RRECOMMENDS:${PN} += "ca-certificates shared-mime-info"
 
-# http://errors.yoctoproject.org/Errors/Details/20370/
+# https://errors.yoctoproject.org/Errors/Details/20370/
 ARM_INSTRUCTION_SET:armv4 = "arm"
 ARM_INSTRUCTION_SET:armv5 = "arm"
 ARM_INSTRUCTION_SET:armv6 = "arm"

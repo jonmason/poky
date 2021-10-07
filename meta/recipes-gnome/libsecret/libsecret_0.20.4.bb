@@ -22,7 +22,7 @@ GTKDOC_MESON_OPTION = 'gtk_doc'
 
 PACKAGECONFIG[manpages] = "-Dmanpage=true,-Dmanpage=false,libxslt-native xmlto-native"
 
-# http://errors.yoctoproject.org/Errors/Details/20228/
+# https://errors.yoctoproject.org/Errors/Details/20228/
 ARM_INSTRUCTION_SET:armv4 = "arm"
 ARM_INSTRUCTION_SET:armv5 = "arm"
 ARM_INSTRUCTION_SET:armv6 = "arm"

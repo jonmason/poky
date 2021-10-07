@@ -3,7 +3,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=0636e73ff0215e8d672dc4c32c317bb3"
 
 INHIBIT_DEFAULT_DEPS = "1"
 
-SRC_URI = "http://downloads.yoctoproject.org/mirror/sources/syslinux-${PV}.tar.xz \
+SRC_URI = "https://downloads.yoctoproject.org/mirror/sources/syslinux-${PV}.tar.xz \
            file://file1 \
            file://file2"
 

@@ -4,7 +4,7 @@ Date: Fri, 8 Jan 2016 16:36:29 +0200
 Subject: [PATCH] Remove tests that fail to build on some PPC32 configurations
 
 Failures are documented here:
-http://errors.yoctoproject.org/Errors/Search/?items=10&query=862d702fbb99e484631315aa44b9e46f8fc567da&filter=valgrind&type=recipe
+https://errors.yoctoproject.org/Errors/Search/?items=10&query=862d702fbb99e484631315aa44b9e46f8fc567da&filter=valgrind&type=recipe
 
 Signed-off-by: Alexander Kanavin <alex.kanavin@gmail.com>
 Upstream-Status: Pending

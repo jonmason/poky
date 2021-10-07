@@ -29,7 +29,7 @@ FILES:${PN} += " \
     ${datadir}/gcr-3 \
 "
 
-# http://errors.yoctoproject.org/Errors/Details/20229/
+# https://errors.yoctoproject.org/Errors/Details/20229/
 ARM_INSTRUCTION_SET:armv4 = "arm"
 ARM_INSTRUCTION_SET:armv5 = "arm"
 ARM_INSTRUCTION_SET:armv6 = "arm"

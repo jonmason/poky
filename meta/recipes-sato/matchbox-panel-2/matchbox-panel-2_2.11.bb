@@ -2,7 +2,7 @@ SUMMARY = "Simple GTK+ based panel for handheld devices"
 DESCRIPTION = "A flexible always present 'window bar' for holding application \
 launchers and small 'applet' style applications"
 HOMEPAGE = "http://matchbox-project.org"
-BUGTRACKER = "http://bugzilla.yoctoproject.org/"
+BUGTRACKER = "https://bugzilla.yoctoproject.org/"
 
 LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://COPYING;md5=94d55d512a9ba36caa9b7df079bae19f \

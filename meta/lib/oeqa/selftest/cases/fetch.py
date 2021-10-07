@@ -47,7 +47,7 @@ PREMIRRORS:forcevariable = ""
         features = """
 DL_DIR = "%s"
 GIT_PROXY_COMMAND = "false"
-MIRRORS:forcevariable = "git://.*/.* http://downloads.yoctoproject.org/mirror/sources/"
+MIRRORS:forcevariable = "git://.*/.* https://downloads.yoctoproject.org/mirror/sources/"
 """ % dldir
         self.write_config(features)
         oe.path.remove(dldir, recurse=True)

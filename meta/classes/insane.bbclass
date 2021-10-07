@@ -1128,7 +1128,7 @@ python do_qa_patch() {
     # Check patch.log for fuzz warnings
     #
     # Further information on why we check for patch fuzz warnings:
-    # http://lists.openembedded.org/pipermail/openembedded-core/2018-March/148675.html
+    # https://www.openembedded.org/pipermail/openembedded-core/2018-March/148675.html
     # https://bugzilla.yoctoproject.org/show_bug.cgi?id=10450
     ###########################################################################
 

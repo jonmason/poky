@@ -10,7 +10,7 @@ Content-Transfer-Encoding: 8bit
 This was ported from meta-oe's patch [1]. The original pixman patch is found
 at [2].
 
-[1] http://cgit.openembedded.org/meta-openembedded/tree/meta-oe/recipes-graphics/xorg-lib/pixman-0.26.2/0001-ARM-qemu-related-workarounds-in-cpu-features-detecti.patch
+[1] https://cgit.openembedded.org/meta-openembedded/tree/meta-oe/recipes-graphics/xorg-lib/pixman-0.26.2/0001-ARM-qemu-related-workarounds-in-cpu-features-detecti.patch
 [2] http://lists.freedesktop.org/archives/pixman/2011-January/000906.html
 
 Upstream-Status: Inappropriate [other] qemu fix

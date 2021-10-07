@@ -11,11 +11,11 @@
 #  Example usage (extended buildtools from milestone):
 #    (1) using --url and --filename
 #        $ install-buildtools \
-#          --url http://downloads.yoctoproject.org/releases/yocto/milestones/yocto-3.1_M3/buildtools \
+#          --url https://downloads.yoctoproject.org/releases/yocto/milestones/yocto-3.1_M3/buildtools \
 #          --filename x86_64-buildtools-extended-nativesdk-standalone-3.0+snapshot-20200315.sh
 #    (2) using --base-url, --release, --installer-version and --build-date
 #        $ install-buildtools \
-#          --base-url http://downloads.yoctoproject.org/releases/yocto \
+#          --base-url https://downloads.yoctoproject.org/releases/yocto \
 #          --release yocto-3.1_M3 \
 #          --installer-version 3.0+snapshot
 #          --build-date 202000315
@@ -23,11 +23,11 @@
 #  Example usage (standard buildtools from release):
 #    (3) using --url and --filename
 #        $ install-buildtools --without-extended-buildtools \
-#          --url http://downloads.yoctoproject.org/releases/yocto/yocto-3.0.2/buildtools \
+#          --url https://downloads.yoctoproject.org/releases/yocto/yocto-3.0.2/buildtools \
 #          --filename x86_64-buildtools-nativesdk-standalone-3.0.2.sh
 #    (4) using --base-url, --release and --installer-version
 #        $ install-buildtools --without-extended-buildtools \
-#          --base-url http://downloads.yoctoproject.org/releases/yocto \
+#          --base-url https://downloads.yoctoproject.org/releases/yocto \
 #          --release yocto-3.0.2 \
 #          --installer-version 3.0.2
 #
@@ -56,7 +56,7 @@ PROGNAME = 'install-buildtools'
 logger = scriptutils.logger_create(PROGNAME, stream=sys.stdout)
 
 DEFAULT_INSTALL_DIR = os.path.join(os.path.split(scripts_path)[0],'buildtools')
-DEFAULT_BASE_URL = 'http://downloads.yoctoproject.org/releases/yocto'
+DEFAULT_BASE_URL = 'https://downloads.yoctoproject.org/releases/yocto'
 DEFAULT_RELEASE = 'yocto-3.2_M3'
 DEFAULT_INSTALLER_VERSION = '3.1+snapshot'
 DEFAULT_BUILDDATE = '20200923'

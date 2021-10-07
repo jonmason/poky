@@ -1,16 +1,16 @@
 SUMMARY = "Additional utilities for the opkg package manager"
 SUMMARY:update-alternatives-opkg = "Utility for managing the alternatives system"
 SECTION = "base"
-HOMEPAGE = "http://git.yoctoproject.org/cgit/cgit.cgi/opkg-utils"
+HOMEPAGE = "https://git.yoctoproject.org/cgit/cgit.cgi/opkg-utils"
 LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://COPYING;md5=94d55d512a9ba36caa9b7df079bae19f \
                     file://opkg.py;beginline=2;endline=18;md5=ffa11ff3c15eb31c6a7ceaa00cc9f986"
 PROVIDES += "${@bb.utils.contains('PACKAGECONFIG', 'update-alternatives', 'virtual/update-alternatives', '', d)}"
 
-SRC_URI = "http://git.yoctoproject.org/cgit/cgit.cgi/${BPN}/snapshot/${BPN}-${PV}.tar.gz \
+SRC_URI = "https://git.yoctoproject.org/cgit/cgit.cgi/${BPN}/snapshot/${BPN}-${PV}.tar.gz \
            file://0001-update-alternatives-correctly-match-priority.patch \
            "
-UPSTREAM_CHECK_URI = "http://git.yoctoproject.org/cgit/cgit.cgi/opkg-utils/refs/"
+UPSTREAM_CHECK_URI = "https://git.yoctoproject.org/cgit/cgit.cgi/opkg-utils/refs/"
 
 SRC_URI[md5sum] = "025b19744e5c7fc1c8380e17df1fcc64"
 SRC_URI[sha256sum] = "528635e674addea5c2b3a3268404ad04a952c4f410d17c3d754f5dd5529770c9"

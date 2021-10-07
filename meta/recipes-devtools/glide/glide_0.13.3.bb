@@ -20,12 +20,12 @@ RDEPENDS:${PN}-ptest += "bash"
 BBCLASSEXTEND = "native nativesdk"
 
 # for x86 ends with textrel in ${PN}
-# http://errors.yoctoproject.org/Errors/Details/185631/
+# https://errors.yoctoproject.org/Errors/Details/185631/
 # ERROR: QA Issue: ELF binary '/work/i586-oe-linux/glide/0.13.1-r0/packages-split/glide/usr/bin/glide' has relocations in .text [textrel]
 INSANE_SKIP:${PN} += "textrel"
 
 # for aarch64 ends with textrel in ${PN}-ptest
-# http://errors.yoctoproject.org/Errors/Details/185633/
+# https://errors.yoctoproject.org/Errors/Details/185633/
 # ERROR: QA Issue: ELF binary '/work/aarch64-oe-linux/glide/0.13.1-r0/packages-split/glide-ptest/usr/lib/glide/ptest/github.com/Masterminds/glide/glide.test' has relocations in .text
 # ELF binary '/work/aarch64-oe-linux/glide/0.13.1-r0/packages-split/glide-ptest/usr/lib/glide/ptest/github.com/Masterminds/glide/dependency/dependency.test' has relocations in .text
 # ELF binary '/work/aarch64-oe-linux/glide/0.13.1-r0/packages-split/glide-ptest/usr/lib/glide/ptest/github.com/Masterminds/glide/repo/repo.test' has relocations in .text

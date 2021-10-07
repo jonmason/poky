@@ -2176,7 +2176,7 @@
       ],
       "execution": {
         "1": {
-          "action": "Clone the poky environment     git clone http://git.yoctoproject.org/git/poky",
+          "action": "Clone the poky environment     git clone https://git.yoctoproject.org/git/poky",
           "expected_results": ""
         },
         "2": {
@@ -2458,7 +2458,7 @@
       ],
       "execution": {
         "1": {
-          "action": "Clone the poky environment     git clone http://git.yoctoproject.org/git/poky",
+          "action": "Clone the poky environment     git clone https://git.yoctoproject.org/git/poky",
           "expected_results": ""
         },
         "2": {
@@ -2496,7 +2496,7 @@
       ],
       "execution": {
         "1": {
-          "action": "Clone the poky environment     git clone http://git.yoctoproject.org/git/poky\n",
+          "action": "Clone the poky environment     git clone https://git.yoctoproject.org/git/poky\n",
           "expected_results": ""
         },
         "2": {
@@ -2513,7 +2513,7 @@
         },
         "5": {
           "action": "Remove all the layers from the project",
-          "expected_results": " you should see a message that reads:  \n\nYou need to add some layers. For that you can:  \n\n-View all layers compatible with this project  \n\n-Import a layer  \n\n-Read about layers in the documentation  \n\nOr type a layer name below.  \n\n\n The \"Choose from the layers compatible with this project\" link should go to the compatible layers page The \"Import a layer\" link should go to the import layer page The \"Read about layers in the documentation\" link should open in a new window and bring you to http://www.yoctoproject.org/docs/current/dev-manual/dev-manual.html#understanding-and-creating-layers"
+          "expected_results": " you should see a message that reads:  \n\nYou need to add some layers. For that you can:  \n\n-View all layers compatible with this project  \n\n-Import a layer  \n\n-Read about layers in the documentation  \n\nOr type a layer name below.  \n\n\n The \"Choose from the layers compatible with this project\" link should go to the compatible layers page The \"Import a layer\" link should go to the import layer page The \"Read about layers in the documentation\" link should open in a new window and bring you to https://www.yoctoproject.org/docs/current/dev-manual/dev-manual.html#understanding-and-creating-layers"
         }
       },
       "summary": "Verify_delete_layer_functionality"

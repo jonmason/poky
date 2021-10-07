@@ -1,6 +1,6 @@
 SUMMARY = "Provides a bridge between gconf and xsettings"
 HOMEPAGE = "https://git.yoctoproject.org/cgit/cgit.cgi/xsettings-daemon/"
-BUGTRACKER = "http://bugzilla.yoctoproject.org/"
+BUGTRACKER = "https://bugzilla.yoctoproject.org/"
 LICENSE = "MIT-style"
 LIC_FILES_CHKSUM = "file://xsettings-manager.h;endline=22;md5=7cfac9d2d4dc3694cc7eb605cf32a69b \
                     file://xsettings-common.h;endline=22;md5=7cfac9d2d4dc3694cc7eb605cf32a69b"

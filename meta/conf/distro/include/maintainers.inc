@@ -12,7 +12,7 @@
 # questions in the future), but please try to do the following first:
 #
 #  - look in the Yocto Project Bugzilla
-#    (http://bugzilla.yoctoproject.org/) to see if a problem has
+#    (https://bugzilla.yoctoproject.org/) to see if a problem has
 #    already been reported
 #
 # - look through recent entries of the appropriate mailing list archives

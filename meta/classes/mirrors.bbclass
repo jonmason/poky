@@ -39,16 +39,16 @@ ${SAVANNAH_NONGNU_MIRROR} http://download-mirror.savannah.nongnu.org/releases \
 ftp://sourceware.org/pub http://mirrors.kernel.org/sourceware \
 ftp://sourceware.org/pub http://gd.tuwien.ac.at/gnu/sourceware \
 ftp://sourceware.org/pub http://ftp.gwdg.de/pub/linux/sources.redhat.com/sourceware \
-cvs://.*/.*     http://downloads.yoctoproject.org/mirror/sources/ \
-svn://.*/.*     http://downloads.yoctoproject.org/mirror/sources/ \
-git://.*/.*     http://downloads.yoctoproject.org/mirror/sources/ \
-hg://.*/.*      http://downloads.yoctoproject.org/mirror/sources/ \
-bzr://.*/.*     http://downloads.yoctoproject.org/mirror/sources/ \
-p4://.*/.*      http://downloads.yoctoproject.org/mirror/sources/ \
-osc://.*/.*     http://downloads.yoctoproject.org/mirror/sources/ \
-https?://.*/.*  http://downloads.yoctoproject.org/mirror/sources/ \
-ftp://.*/.*     http://downloads.yoctoproject.org/mirror/sources/ \
-npm://.*/?.*    http://downloads.yoctoproject.org/mirror/sources/ \
+cvs://.*/.*     https://downloads.yoctoproject.org/mirror/sources/ \n \
+svn://.*/.*     https://downloads.yoctoproject.org/mirror/sources/ \n \
+git://.*/.*     https://downloads.yoctoproject.org/mirror/sources/ \n \
+hg://.*/.*      https://downloads.yoctoproject.org/mirror/sources/ \n \
+bzr://.*/.*     https://downloads.yoctoproject.org/mirror/sources/ \n \
+p4://.*/.*      https://downloads.yoctoproject.org/mirror/sources/ \n \
+osc://.*/.*     https://downloads.yoctoproject.org/mirror/sources/ \n \
+https?$://.*/.* https://downloads.yoctoproject.org/mirror/sources/ \n \
+ftp://.*/.*     https://downloads.yoctoproject.org/mirror/sources/ \n \
+npm://.*/?.*    https://downloads.yoctoproject.org/mirror/sources/ \n \
 cvs://.*/.*     http://sources.openembedded.org/ \
 svn://.*/.*     http://sources.openembedded.org/ \
 git://.*/.*     http://sources.openembedded.org/ \

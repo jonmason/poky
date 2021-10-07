@@ -309,7 +309,7 @@ class PackageManager(object, metaclass=ABCMeta):
         """
         Add remote package feeds into repository manager configuration. The parameters
         for the feeds are set by feed_uris, feed_base_paths and feed_archs.
-        See http://www.yoctoproject.org/docs/current/ref-manual/ref-manual.html#var-PACKAGE_FEED_URIS
+        See https://www.yoctoproject.org/docs/current/ref-manual/ref-manual.html#var-PACKAGE_FEED_URIS
         for their description.
         """
         pass

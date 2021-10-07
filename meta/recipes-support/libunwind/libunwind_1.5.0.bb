@@ -15,7 +15,7 @@ SRC_URI[sha256sum] = "90337653d92d4a13de590781371c604f9031cdb50520366aa1e3a91e1e
 
 EXTRA_OECONF:append:libc-musl = " --disable-documentation --disable-tests --enable-static"
 
-# http://errors.yoctoproject.org/Errors/Details/20487/
+# https://errors.yoctoproject.org/Errors/Details/20487/
 ARM_INSTRUCTION_SET:armv4 = "arm"
 ARM_INSTRUCTION_SET:armv5 = "arm"
 

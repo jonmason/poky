@@ -509,7 +509,7 @@ class RecipetoolTests(RecipetoolBase):
         temprecipe = os.path.join(self.tempdir, 'recipe')
         os.makedirs(temprecipe)
         recipefile = os.path.join(temprecipe, 'matchbox-terminal_git.bb')
-        srcuri = 'http://git.yoctoproject.org/git/matchbox-terminal'
+        srcuri = 'https://git.yoctoproject.org/git/matchbox-terminal'
         result = runCmd('recipetool create -o %s %s' % (temprecipe, srcuri))
         self.assertTrue(os.path.isfile(recipefile))
         checkvars = {}

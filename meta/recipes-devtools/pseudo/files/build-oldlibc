@@ -9,7 +9,7 @@
 
 for i in x86_64 aarch64 i686; do
     if [ ! -e $i-nativesdk-libc.tar.xz ]; then
-        wget http://downloads.yoctoproject.org/releases/uninative/3.2/$i-nativesdk-libc.tar.xz
+        wget https://downloads.yoctoproject.org/releases/uninative/3.2/$i-nativesdk-libc.tar.xz
     fi
     tar -xf $i-nativesdk-libc.tar.xz --wildcards \*/lib/libpthread\* \*/lib/libdl\*
     cd $i-linux/lib

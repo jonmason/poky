@@ -26,7 +26,7 @@ and `__old_sem_getvalue' is to compat the old version
 sem_getvalue@GLIBC_2.0.
 
 To build python for embedded Linux systems:
-http://www.yoctoproject.org/docs/2.3.1/yocto-project-qs/yocto-project-qs.html
+https://www.yoctoproject.org/docs/2.3.1/yocto-project-qs/yocto-project-qs.html
 If not explicitly link to library pthread (-lpthread), it will
 load glibc's sem_getvalue randomly at runtime.
 

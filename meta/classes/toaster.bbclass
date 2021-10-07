@@ -69,7 +69,7 @@ python toaster_layerinfo_dumpdata() {
 
         layer_info = {}
         layer_name = layer_path.split('/')[-1]
-        layer_url = 'http://layers.openembedded.org/layerindex/layer/{layer}/'
+        layer_url = 'https://layers.openembedded.org/layerindex/layer/{layer}/'
         layer_url_name = _get_url_map_name(layer_name)
 
         layer_info['name'] = layer_url_name

@@ -1,6 +1,6 @@
 SUMMARY = "An image containing the build system itself"
 DESCRIPTION = "An image containing the build system that you can boot and run using either VirtualBox, VMware Player or VMware Workstation."
-HOMEPAGE = "http://www.yoctoproject.org/documentation/build-appliance"
+HOMEPAGE = "https://www.yoctoproject.org/software-item/build-appliance/"
 
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"

@@ -96,7 +96,7 @@ def icu_download_folder(d):
 ICU_PV = "${@icu_download_version(d)}"
 ICU_FOLDER = "${@icu_download_folder(d)}"
 
-# http://errors.yoctoproject.org/Errors/Details/20486/
+# https://errors.yoctoproject.org/Errors/Details/20486/
 ARM_INSTRUCTION_SET:armv4 = "arm"
 ARM_INSTRUCTION_SET:armv5 = "arm"
 

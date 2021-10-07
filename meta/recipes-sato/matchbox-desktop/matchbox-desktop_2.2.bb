@@ -1,7 +1,7 @@
 SUMMARY = "Matchbox Window Manager Desktop"
 DESCRIPTION = "A lightweight windows manager for embedded systems. It uses the desktop background to provide an application launcher and allows modules to be loaded for additional functionality."
 HOMEPAGE = "http://matchbox-project.org/"
-BUGTRACKER = "http://bugzilla.yoctoproject.org/"
+BUGTRACKER = "https://bugzilla.yoctoproject.org/"
 
 LICENSE = "GPLv2+ & LGPLv2+"
 LIC_FILES_CHKSUM = "file://COPYING;md5=94d55d512a9ba36caa9b7df079bae19f \

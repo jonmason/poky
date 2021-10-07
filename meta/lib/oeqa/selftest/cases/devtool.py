@@ -269,7 +269,7 @@ class DevtoolAddTests(DevtoolBase):
         self.track_for_cleanup(tempdir)
         pn = 'pv'
         pv = '1.5.3'
-        url = 'http://downloads.yoctoproject.org/mirror/sources/pv-1.5.3.tar.bz2'
+        url = 'https://downloads.yoctoproject.org/mirror/sources/pv-1.5.3.tar.bz2'
         result = runCmd('wget %s' % url, cwd=tempdir)
         result = runCmd('tar xfv %s' % os.path.basename(url), cwd=tempdir)
         srcdir = os.path.join(tempdir, '%s-%s' % (pn, pv))
@@ -1788,7 +1788,7 @@ class DevtoolUpgradeTests(DevtoolBase):
         recipename = 'i2c-tools'
         recipever = '3.1.2'
         recipefile = os.path.join(self.workspacedir, 'recipes', recipename, '%s_%s.bb' % (recipename, recipever))
-        url = 'http://downloads.yoctoproject.org/mirror/sources/i2c-tools-%s.tar.bz2' % recipever
+        url = 'https://downloads.yoctoproject.org/mirror/sources/i2c-tools-%s.tar.bz2' % recipever
         def add_recipe():
             result = runCmd('devtool add %s' % url)
             self.assertExists(recipefile, 'Expected recipe file not created')
