@@ -27,6 +27,8 @@ local_conf_header:
     INHERIT += "rm_work"
   noptest: |
     DISTRO_FEATURES:remove = "ptest"
+  kvm: |
+    QEMU_USE_KVM = ""
   sstate_mirror: |
     BB_HASHSERVE_UPSTREAM = "hashserv.yocto.io:8687"
     BB_HASHSERVE = "auto"
