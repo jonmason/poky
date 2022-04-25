@@ -39,26 +39,26 @@ beaglebone-yocto:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: linux-yocto
+      - KERNEL: [linux-yocto, dev-kernel]
 
 edgerouter:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: linux-yocto
+      - KERNEL: [linux-yocto, dev-kernel]
 
 genericx86-64:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: linux-yocto
+      - KERNEL: [linux-yocto, dev-kernel]
         TESTING: testimage
 
 genericx86:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: linux-yocto
+      - KERNEL: [linux-yocto, dev-kernel]
         TESTING: testimage
 
 # Build and test jobs for all QEMU machines
@@ -67,35 +67,35 @@ qemuarm64:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, poky-tiny, poky-altcfg, linux-yocto-rt]
+      - KERNEL: [linux-yocto, dev-kernel, poky-tiny, poky-altcfg, linux-yocto-rt]
         TESTING: testimage
 
 qemuarm:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, poky-tiny, poky-altcfg, linux-yocto-rt]
+      - KERNEL: [linux-yocto, dev-kernel, poky-tiny, poky-altcfg, linux-yocto-rt]
         TESTING: testimage
 
 qemuarmv5:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, poky-tiny, poky-altcfg, linux-yocto-rt]
+      - KERNEL: [linux-yocto, dev-kernel, poky-tiny, poky-altcfg, linux-yocto-rt]
         TESTING: testimage
 
 qemumips64:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: linux-yocto
+      - KERNEL: [linux-yocto, dev-kernel]
         TESTING: testimage
 
 qemumips:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, linux-yocto-rt]
+      - KERNEL: [linux-yocto, dev-kernel, linux-yocto-rt]
         TESTING: testimage
 
 qemuppc64:
@@ -109,33 +109,33 @@ qemuppc:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, linux-yocto-rt]
+      - KERNEL: [linux-yocto, dev-kernel, linux-yocto-rt]
         TESTING: testimage
 
 qemuriscv32:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: linux-yocto
+      - KERNEL: [linux-yocto, dev-kernel]
         TESTING: testimage
 
 qemuriscv64:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: linux-yocto
+      - KERNEL: [linux-yocto, dev-kernel]
         TESTING: testimage
 
 qemux86-64:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, poky-tiny, poky-altcfg, linux-yocto-rt]
+      - KERNEL: [linux-yocto, dev-kernel, poky-tiny, poky-altcfg, linux-yocto-rt]
         TESTING: testimage
 
 qemux86:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, poky-tiny, poky-altcfg, linux-yocto-rt]
+      - KERNEL: [linux-yocto, dev-kernel, poky-tiny, poky-altcfg, linux-yocto-rt]
         TESTING: testimage
