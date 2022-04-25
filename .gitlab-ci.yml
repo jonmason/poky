@@ -20,6 +20,9 @@ stages:
     - echo DL_DIR = $DL_DIR
     - rm -rf $KAS_WORK_DIR
     - mkdir --verbose --parents $KAS_WORK_DIR $SSTATE_DIR $DL_DIR
+  retry:
+    max: 2
+    when: stuck_or_timeout_failure
 
 # Generalised fragment to do a Kas build
 .build:
