@@ -8,3 +8,6 @@ local_conf_header:
     DEFAULT_TEST_SUITES:remove = "xorg"
 
 machine: beaglebone-yocto
+
+target:
+  - core-image-base
