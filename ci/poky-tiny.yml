@@ -1,0 +1,11 @@
+header:
+  version: 9
+
+distro: poky-tiny
+
+local_conf_header:
+  hacking: |
+    TEST_SUITES = "ping"
+
+target:
+  - core-image-minimal
