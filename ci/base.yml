@@ -41,4 +41,4 @@ local_conf_header:
 machine: unset
 
 target:
-  - core-image-base
+  - core-image-sato
