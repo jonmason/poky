@@ -67,21 +67,21 @@ qemuarm64:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, poky-altcfg, linux-yocto-rt]
+      - KERNEL: [linux-yocto, poky-tiny, poky-altcfg, linux-yocto-rt]
         TESTING: testimage
 
 qemuarm:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, poky-altcfg, linux-yocto-rt]
+      - KERNEL: [linux-yocto, poky-tiny, poky-altcfg, linux-yocto-rt]
         TESTING: testimage
 
 qemuarmv5:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, poky-altcfg, linux-yocto-rt]
+      - KERNEL: [linux-yocto, poky-tiny, poky-altcfg, linux-yocto-rt]
         TESTING: testimage
 
 qemumips64:
@@ -130,12 +130,12 @@ qemux86-64:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, poky-altcfg, linux-yocto-rt]
+      - KERNEL: [linux-yocto, poky-tiny, poky-altcfg, linux-yocto-rt]
         TESTING: testimage
 
 qemux86:
   extends: .build
   parallel:
     matrix:
-      - KERNEL: [linux-yocto, poky-altcfg, linux-yocto-rt]
+      - KERNEL: [linux-yocto, poky-tiny, poky-altcfg, linux-yocto-rt]
         TESTING: testimage
